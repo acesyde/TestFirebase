@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '8'
+cache:
+  directories:
+  - node_modules
+script:
+  - cd test-app
+  - yarn install
+  - yarn test
+  - yarn build
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  token:
+    secure: bx1huxB921cMdDjyggB4PmdKel7PM0HFqiTFOLNlnpYR5Q3cWgPhB2uiWdT1OstSZjGA8dp4p9XDRC7a2kKdS1DCpOUmPdrgLRePbSSIQyM9JJG6ELsZbliWquLaU7G3ihVJADrkoEYDMCBVSfUggDsPPymx4L72H8luJngydD3MbfCC88KDo1KjTqKWxv9Y+we+8cPo/Odx23tnUba+1PQ6MNYYAywYGEtFbZVnD3ocKIC5OO+HwqjnJEMooudWv8963Qeelv/QaY/SLXarmTd4GXAcRoau84EzfsWl7fYd6SZeMJLLcqmB8ob0eQEiQKFz7LkkA0mgT8DDjd0tIMmLNaJvUaw8BiUd5mnnzyyLYXvEzub8ncNQKhfC30PzcnTFDLYUHg+olaxE/XBKIU41u9LT1oqK01NWzMXNvjUDHgOgsqaoRnTdasOx9fJiVz1bKX3IkC3hShw8zroDFck35ph1+4DEzFlJK1I0KsUUjMzxflTPjOMG5ztbw3Dgwk9uJirIvxAhLmlQetFO9Egb1edfHKQfCO74fz4OQLoFj9Z3qYFEFhgHbHoGK/LmH3x7bphb9oXqPspqM1KCJ6nm2zvA7WC8yFuAaFqMajHN81WQ+uNKDw/2o3AjLy3A2ZKnGWOcy0Esi7COdrJZiSNeTvucT342DYPeaHtrd0k=
