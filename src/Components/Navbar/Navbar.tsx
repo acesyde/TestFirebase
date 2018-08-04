@@ -4,18 +4,25 @@ import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 import { IDefaultProps } from "./types";
 
-export default class Navbar extends React.Component<IDefaultProps> {
+class Navbar extends React.Component<IDefaultProps> {
+
+    public static defaultProps: Partial<IDefaultProps> = {
+        title: "Hello"
+    }
+
     public render() {
-      return (
-        <div>
-            <AppBar position="static">
-                <Toolbar>
-                    <Typography variant="title" color="inherit">
-                        {this.props.title}
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-        </div>
-    );
-  }
+        return (
+            <div>
+                <AppBar position="static">
+                    <Toolbar>
+                        <Typography variant="title" color="inherit">
+                            {this.props.title}
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
+            </div>
+        );
+    }
 }
+
+export default Navbar;
