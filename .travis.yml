@@ -6,7 +6,11 @@ cache:
   - node_modules
 script:
   - yarn install
-  - yarn build
+  - yarn clean
+  - yarn typecheck-app
+  - yarn lint-app
+  - yarn build-app
+  - yarn build-public
 deploy:
   provider: firebase
   skip_cleanup: true
